@@ -6,7 +6,7 @@ a1=-0.78054651;
 i=1;
 E=0;
 n=input('Enter n :');
-
+r4;
 
 while(i<n+1)
     r(i)=input('Enter r :');
