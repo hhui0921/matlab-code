@@ -15,7 +15,7 @@ vt = 36;
 error = 1;
 fm = (sqrt((g*m)/c))*(tanh(sqrt((g*c)/m)*t))-vt;
 
-fprintf('step\tfmL\t\t\tfmU\t\t\tfmr\t\t\tmL\t\t\tmU\t\t\tmr\t\t\tError\n');
+fprintf('step\tfmL\t\t\t\tfmU\t\t\t\tfmr\t\t\t\tmL\t\t\t\tmU\t\t\t\tmr\t\t\t\tError\n');
 
 mr = (ml + mu)/2;
 
@@ -24,7 +24,7 @@ fmu = eval(subs(fm,m,mu));
 fmr = eval(subs(fm,m,mr));
 
 while error >= (e/100)
-    fprintf('%d\t\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n',i,fml,fmu,fmr,ml,mu,mr,error);
+    fprintf('%d\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f\n',i,fml,fmu,fmr,ml,mu,mr,error);
     mrr = mr;
     if fml*fmr < 0
         mu = mr;
@@ -38,5 +38,5 @@ while error >= (e/100)
     error = abs((mr-mrr)/mr);
     i = i + 1;
 end
-fprintf('%d\t\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n',i,fml,fmu,fmr,ml,mu,mr,error);
+fprintf('%d\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f\n',i,fml,fmu,fmr,ml,mu,mr,error);
 end
