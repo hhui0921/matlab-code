@@ -9,7 +9,7 @@ m=input('Enter m :');
 dm=input('Enter dm :');
 mm=input('Enter mm :');
 vt=input('Enter vt :');
-while(m<mm)
+while(m<=mm)
 
 v(i)=(sqrt(g*m/c))*tanh((sqrt(g*c/m))*t)-vt;
 M(i)=m;
