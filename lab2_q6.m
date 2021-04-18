@@ -26,9 +26,10 @@ while error >= (e/100)
     ffm(i) = eval(subs(fm,m,x(i)));
 
     error = abs((x(i)-x(i-1))/x(i));
-    k = k + 1;
     fprintf('%d\t\t%.10f\t\t%.10f\n',k,x(i),error);
     i=i+1;
+    k = k + 1;
 end
 
 end
+

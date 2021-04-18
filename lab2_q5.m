@@ -16,7 +16,7 @@ error = 1;
 fm = (sqrt((g*m)/c))*(tanh(sqrt((g*c)/m)*t))-vt;
 fmd=diff(fm);
 fprintf('iteration\txi\t\t\t\t\tError\n');
-
+fprintf('%d\t\t\t%f\t\t\t%f\n',i,mi,error);
 
 while error >= (e/100)
     ffm = eval(subs(fm,m,mi));

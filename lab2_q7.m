@@ -25,8 +25,8 @@ while error >= (e/100)
     mii=mi;
     mi=mi-ss*mi*ffm/(ffms-ffm);
     error = abs((mi-mii)/mi);
-    i = i + 1;
     fprintf('%d\t\t%.10f\t\t%.10f\n',i,mi,error);
+    i = i + 1;
 end
 
 end
